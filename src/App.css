@@ -2,6 +2,31 @@
   text-align: center;
 }
 
+.fill-window {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: rgb(222, 225, 228);
+
+}
+
+.content {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 80%;
+}
+
+.field {
+  width: 30%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +61,5 @@
     transform: rotate(360deg);
   }
 }
+
+

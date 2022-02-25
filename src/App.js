@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import TodoList from './components/TodoList';
+import AddTodo from './components/AddTodo';
+import { useState } from 'react';
+
 
 function App() {
+
+  const [todoList, setTodoList] = useState(
+    [
+      { text: 'first task' },
+      { text: 'second task' },
+      { text: 'third task' },
+    ]
+  )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className='fill-window'>
+      <div className='center'>
+        <div className='field'>
+          <Card >
+            <CardContent>
+              <Header />
+              {/* input */}
+              <AddTodo />
+            </CardContent>
+            <TodoList list={todoList}/>
+          </Card>
+        </div>
+      </div>
+    </div >
   );
 }
 
